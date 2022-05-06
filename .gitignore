@@ -128,4 +128,7 @@ dist
 temp/
 egg.ico
 Shell Shockers-win32-x64/
+Shell Shockers-win32-ia32/
 buildstuff.txt
+shellshock_64.exe
+shellshock_32.exe
