@@ -126,3 +126,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 temp/
+egg.ico
+Shell Shockers-win32-x64/
+buildstuff.txt
