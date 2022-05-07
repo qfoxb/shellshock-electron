@@ -2,7 +2,7 @@
 ### A simple electron app to play the browser game "Shell Shockers" created by [BlueWizard Digital](https://github.com/BlueWizardDigital)
 # Download
 ## [Windows (64-Bit)](https://github.com/qfoxb/shellshock-electron/releases/latest/download/shellshock_64.exe)
-## [Windows (32-Bit)](https://github.com/qfoxb/shellshock-electron/releases/latest/download/shellshock_32.exe)
+## [Windows (32-Bit)](https://github.com/qfoxb/shellshock-electron/releases/latest/download/shellshock_32.exe) (google/facebook sign in broken)
 ## [MacOS](https://github.com/qfoxb/shellshock-electron/releases/latest/download/shellshock_macOS.dmg)
 ## [Linux (x86_64)](https://github.com/qfoxb/shellshock-electron/releases/latest/download/ShellShockers-linux-x64.zip)
 
