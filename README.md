@@ -7,7 +7,4 @@
 ## [Linux (x86_64)](https://github.com/qfoxb/shellshock-electron/releases/latest/download/ShellShockers-linux-x64.zip)
 
 # Building
-Install the latest build of [node.js](https://nodejs.org/en/download/current/) for your platform.  
-In a console, run ```npm install nativefier -g```.
-After the installation has finished, run  
-```nativefier --name "foo_bar" https://shellshock.io``` (replace foo_bar with the name of your application)
+Download and execute the ```build.bat``` file. Only a windows buildscript has been written so far, and if you'd like to write a bash one, please open a PR!
