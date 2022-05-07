@@ -53,8 +53,9 @@ nativefier --update --name "Shell Shockers" --arch x64 --platform linux --electr
 :all
 nativefier --update --name "Shell Shockers" --arch x64 --platform windows --electron-version 18.2.1 --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
 nativefier --update --name "Shell Shockers" --arch ia32 --platform windows --electron-version 18.2.1 --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
-nativefier --update --name "Shell Shockers" --arch universal --platform darwin --darwin-dark-mode-support --fast-quit --electron-version 18.2.1 --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
+nativefier --update --name "Shell Shockers" --arch x64 --platform darwin --darwin-dark-mode-support --fast-quit --electron-version 18.2.1 --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io
 nativefier --update --name "Shell Shockers" --arch x64 --platform linux --electron-version 18.2.1 --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
 goto :end
 pause
 :end
+pause
