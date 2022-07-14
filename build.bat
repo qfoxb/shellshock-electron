@@ -1,3 +1,4 @@
+@echo off
 :: Check for administrator permissions
 :-------------------------------------
 REM  --> Check for permissions
@@ -27,9 +28,9 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"    
 where /q node || ECHO Cound not find node.js, Please install! && goto :end
 echo This script will build Shell Shockers for Electron.
-echo Version: 1.1
+echo Version: 1.2
 where /q nativefier || ECHO Could not find nativefier on PATH. Installing... && npm install nativefier -g
-set /P c=Which Platform are you trying to build for?[win64/win32/mac/linux64/all]?
+set /P c=Which Platform are you trying to build for?[win64/win32/mac/linux64/all]? 
 if /I "%c%" EQU "win64" goto :win64
 if /I "%c%" EQU "win32" goto :win32
 if /I "%c%" EQU "mac" goto :darwin
