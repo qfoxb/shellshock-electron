@@ -33,7 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm install nativefier -g
-          npm audit fix
           nativefier --update --name "Shell Shockers" --arch x64 --platform windows --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
           ls -lah
 
