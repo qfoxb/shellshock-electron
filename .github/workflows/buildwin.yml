@@ -34,13 +34,11 @@ jobs:
       - name: Build (Windows/Linux)
         run: |
           nativefier --update --name "Shell Shockers" --arch x64 --platform windows --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
-          nativefier --update --name "Shell Shockers" --arch ia32 --platform windows --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
           nativefier --update --name "Shell Shockers" --arch x64 --platform linux --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
       - uses: actions/upload-artifact@v3
         with:
           name: Upload (windows x64)
           path: |
             Shell Shockers-win32-x64/
-            Shell Shockers-win32-ia32/
             Shell Shockers-linux-x64/
           if-no-files-found: error
