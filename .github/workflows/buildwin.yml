@@ -31,10 +31,12 @@ jobs:
       - name: Install dependencies
         run: npm install nativefier -g
       # Runs a set of commands using the runners shell
-      - name: Build (Windows/Linux)
-        run: |
-          nativefier --update --name "Shell Shockers" --arch x64 --platform windows --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
-          nativefier --update --name "Shell Shockers" --arch x64 --platform linux --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
+      - name: Build (Windows)
+        run: nativefier --update --name "Shell Shockers" --arch x64 --platform windows --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
+
+      - name: Build (Linux)
+        run: nativefier --update --name "Shell Shockers" --arch x64 --platform linux --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
+    
       - uses: actions/upload-artifact@v3
         with:
           name: Upload (windows x64)
