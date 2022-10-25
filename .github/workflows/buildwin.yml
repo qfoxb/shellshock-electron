@@ -39,8 +39,11 @@ jobs:
     
       - uses: actions/upload-artifact@v3
         with:
-          name: Upload (windows x64)
-          path: |
-            Shell Shockers-win32-x64/
-            Shell Shockers-linux-x64/
+          name: Upload (windows)
+          path: Shell Shockers-win32-x64/
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Upload (Linux)
+          path: Shell Shockers-linux-x64/
           if-no-files-found: error
