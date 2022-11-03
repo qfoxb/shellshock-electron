@@ -37,7 +37,7 @@ jobs:
         run: nativefier --update --name "Shell Shockers" --arch universal --platform darwin --darwin-dark-mode-support --fast-quit --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
       
       - name: Package into DMG
-        run: create-dmg Shell Shockers-darwin-universal/Shell Shockers.app
+        run: create-dmg "Shell Shockers-darwin-universal/Shell Shockers.app"
       - uses: actions/upload-artifact@v3
         with:
           name: Upload (macOS)
