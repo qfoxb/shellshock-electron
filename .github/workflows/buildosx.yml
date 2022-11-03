@@ -32,7 +32,6 @@ jobs:
         run: |
               npm install nativefier -g
               npm install create-dmg -g
-              npm audit fix 
       # Runs a set of commands using the runners shell
       - name: Build (macOS)
         run: nativefier --update --name "Shell Shockers" --arch universal --platform darwin --darwin-dark-mode-support --fast-quit --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
