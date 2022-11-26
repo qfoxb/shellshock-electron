@@ -43,5 +43,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Upload (macOS Intel)
-          path: Shell Shockers-x64-x64/Shell Shockers.dmg
+          path: Shell Shockers.dmg
           if-no-files-found: error
