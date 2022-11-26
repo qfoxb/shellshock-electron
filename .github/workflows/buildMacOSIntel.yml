@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Build (macOS)
+name: Build (macOS Intel)
 
 # Controls when the workflow will run
 on:
@@ -34,14 +34,14 @@ jobs:
               npm install create-dmg -g
       # Runs a set of commands using the runners shell
       - name: Build (macOS)
-        run: nativefier --update --name "Shell Shockers" --arch universal --platform darwin --darwin-dark-mode-support --fast-quit --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
+        run: nativefier --update --name "Shell Shockers" --arch x64 --platform darwin --darwin-dark-mode-support --fast-quit --user-agent firefox  --internal-urls "(.*?accounts\.google\.com.*?|.*?shellshockio-181719\.firebaseapp\.com.*?)" --single-instance  https://shellshock.io --verbose
       
       - name: Package into DMG
         continue-on-error: true
-        run: create-dmg "Shell Shockers-darwin-universal/Shell Shockers.app"
+        run: create-dmg "Shell Shockers-darwin-x64/Shell Shockers.app"
         
       - uses: actions/upload-artifact@v3
         with:
-          name: Upload (macOS)
-          path: Shell Shockers-darwin-universal/
+          name: Upload (macOS Intel)
+          path: Shell Shockers-x64-x64/Shell Shockers.dmg
           if-no-files-found: error
